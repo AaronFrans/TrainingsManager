@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DomainLibrary.Domain.CyclingSession" Collapsed="true">
+    <Position X="4.5" Y="3.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="TrainingType" Type="DomainLibrary.Domain.TrainingType" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6" Y="3.562" />
+        <Point X="6.25" Y="3.562" />
+        <Point X="6.25" Y="4.39" />
+        <Point X="6.5" Y="4.39" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACIAAIACAAAAAEAAAAAAAEAAAAAABAAAAAABAAIQA=</HashCode>
+      <FileName>Domain\CyclingSession.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="BikeType" />
+      <Property Name="TrainingType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DomainLibrary.Domain.Report" Collapsed="true">
+    <Position X="2.25" Y="4" Width="1.25" />
+    <AssociationLine Name="Runs" Type="DomainLibrary.Domain.RunningSession" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.5" Y="4.453" />
+        <Point X="5.24" Y="4.453" />
+        <Point X="5.24" Y="4.652" />
+        <Point X="5.25" Y="4.652" />
+        <Point X="5.25" Y="4.75" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AIAAAUCAIAAAEQAAAAAIAgAgAAIAAAAAIAAAAEIEIAQ=</HashCode>
+      <FileName>Domain\Report.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Rides" />
+      <Property Name="Runs" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DomainLibrary.Domain.RunningSession" Collapsed="true">
+    <Position X="4.5" Y="4.75" Width="1.5" />
+    <AssociationLine Name="TrainingType" Type="DomainLibrary.Domain.TrainingType" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6" Y="5.063" />
+        <Point X="6.178" Y="5.063" />
+        <Point X="6.178" Y="4.617" />
+        <Point X="6.5" Y="4.617" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAIACAAAAAEAAAAAAAEAAAAAABAAAAAAAAAIQA=</HashCode>
+      <FileName>Domain\RunningSession.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="TrainingType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DomainLibrary.Domain.TrainingManager" Collapsed="true">
+    <Position X="2.25" Y="3.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAIAAABQAQAAgAAAAAAAAAwAAABAAAIAAAAAAACEAAA=</HashCode>
+      <FileName>Domain\TrainingManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="uow" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DomainLibrary.Domain.DomainException" Collapsed="true">
+    <Position X="4.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\DomainException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="DomainLibrary.IUnitOfWork">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAIQAAAAAAA=</HashCode>
+      <FileName>IUnitOfWork.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CyclingTrainings" />
+      <Property Name="RunningTrainings" />
+    </ShowAsAssociation>
+  </Interface>
+  <Interface Name="DomainLibrary.Repositories.ICyclingRepository" Collapsed="true">
+    <Position X="4.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAAQAAAAAAIIQAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Repositories\ICyclingRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DomainLibrary.Repositories.IRunningRepository" Collapsed="true">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAAQAAAAAAIIQAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Repositories\IRunningRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="DomainLibrary.Domain.BikeType" Collapsed="true">
+    <Position X="6.5" Y="3.25" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAgAAAAAAAAAAAgAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\BikeType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="DomainLibrary.Domain.SessionType" Collapsed="true">
+    <Position X="2.25" Y="4.75" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAABAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\SessionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="DomainLibrary.Domain.TrainingType" Collapsed="true">
+    <Position X="6.5" Y="4.25" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACIAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\TrainingType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
