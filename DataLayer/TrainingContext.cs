@@ -15,9 +15,9 @@ namespace DataLayer
         {
         }
 
-        public TrainingContext(string db="Production") : base()
+        public TrainingContext(string db = "Production") : base()
         {
-            SetConnectionString(db);           
+            SetConnectionString(db);
         }
         private void SetConnectionString(string db = "Production")
         {
@@ -40,11 +40,34 @@ namespace DataLayer
         public DbSet<RunningSession> RunningSessions { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            if(connectionString==null)
+            if (connectionString == null)
             {
                 SetConnectionString();
             }
             optionsBuilder.UseSqlServer(connectionString);
+        }
+    }
+
+
+    public class TrainingContextTest : TrainingContext
+    {
+        public TrainingContextTest() : base("Test")
+        {
+
+        }
+        public TrainingContextTest(bool keepExistingDB = false) : base("Test")
+        {
+            if (keepExistingDB)
+            {
+                Database.EnsureCreated();
+            }
+            else
+            {
+                Database.EnsureDeleted();
+                Database.EnsureCreated();
+            }
+
+
         }
     }
 }

@@ -9,6 +9,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataLayer", "DataLayer\Data
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppPresentationLayer", "ConsoleAppPresentationLayer\ConsoleAppPresentationLayer.csproj", "{4885081F-3295-45D1-B2B8-6AEDEE27BF5C}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLayerTests", "BusinessLayerTests\BusinessLayerTests.csproj", "{91AF51A4-E07D-445D-AA95-8AA17BAE75C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFPresentationLayer", "WPFPresentationLayer\WPFPresentationLayer.csproj", "{EF45A56E-C2D7-41B8-9FA9-87BC5F642306}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{4885081F-3295-45D1-B2B8-6AEDEE27BF5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4885081F-3295-45D1-B2B8-6AEDEE27BF5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4885081F-3295-45D1-B2B8-6AEDEE27BF5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91AF51A4-E07D-445D-AA95-8AA17BAE75C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91AF51A4-E07D-445D-AA95-8AA17BAE75C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91AF51A4-E07D-445D-AA95-8AA17BAE75C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91AF51A4-E07D-445D-AA95-8AA17BAE75C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF45A56E-C2D7-41B8-9FA9-87BC5F642306}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF45A56E-C2D7-41B8-9FA9-87BC5F642306}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF45A56E-C2D7-41B8-9FA9-87BC5F642306}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF45A56E-C2D7-41B8-9FA9-87BC5F642306}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
