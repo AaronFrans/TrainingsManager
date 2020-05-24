@@ -47,8 +47,6 @@ namespace DataLayer
             optionsBuilder.UseSqlServer(connectionString);
         }
     }
-
-
     public class TrainingContextTest : TrainingContext
     {
         public TrainingContextTest() : base("Test")

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DataLayer;
+using DomainLibrary.Domain;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,10 +23,11 @@ namespace WPFPresentationLayer
     /// 
     public partial class MainWindow : Window
     {
-
+        private TrainingManager tm;
         public MainWindow()
         {
             InitializeComponent();
+            tm = new TrainingManager(new UnitOfWork(new TrainingContext(null)));
         }
     }
 }

@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFPresentationLayer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Training Manager" Height="450" Width="800">
     <Grid>
-
+        <Button  Content="tesjghivghIUhz:ggmlmsg"  HorizontalAlignment="Left" Margin="63,295,0,0" VerticalAlignment="Top" Height="59" Width="92">
+        </Button>
     </Grid>
 </Window>
