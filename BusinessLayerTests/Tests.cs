@@ -155,7 +155,7 @@ namespace BusinessLayerTests
             tm.AddCyclingTraining(new DateTime(2019, 10, 4), 200, new TimeSpan(2, 30, 0), 20, 2, TrainingType.Endurance, "number 1", BikeType.IndoorBike);
             tm.AddCyclingTraining(new DateTime(2019, 10, 5), 300, new TimeSpan(2, 30, 0), 20, 2, TrainingType.Endurance, "number 2", BikeType.IndoorBike);
             tm.AddCyclingTraining(new DateTime(2019, 10, 6), 150, new TimeSpan(2, 0, 0), 20, 2, TrainingType.Endurance, "number 3", BikeType.IndoorBike);
-            tm.AddCyclingTraining(new DateTime(2018, 10, 1), 200, new TimeSpan(2, 30, 0), 20, 2, TrainingType.Endurance, "number 4", BikeType.IndoorBike);
+            tm.AddCyclingTraining(new DateTime(2018, 10, 2), 200, new TimeSpan(2, 30, 0), 20, 2, TrainingType.Endurance, "number 4", BikeType.IndoorBike);
 
             int expectedNumberOfTrainingsPerType = 3;
             int expectedNumberOfTrainingsTotal = 6;

@@ -7,7 +7,26 @@
         mc:Ignorable="d"
         Title="Training Manager" Height="450" Width="800">
     <Grid>
-        <Button  Content="tesjghivghIUhz:ggmlmsg"  HorizontalAlignment="Left" Margin="63,295,0,0" VerticalAlignment="Top" Height="59" Width="92">
+        <Button Name="AddSess"  HorizontalAlignment="Left" Margin="63,295,0,0" VerticalAlignment="Top" Height="67" Width="134" Click="AddSess_Click">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+                Click to add a training session.
+            </TextBlock>
         </Button>
+
+        <Button Name="showGivenMonth"  HorizontalAlignment="Left" Margin="247,295,0,0" VerticalAlignment="Top" Height="67" Width="134" Click="showGivenMonth_Click">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+                Click to show sessions for a given month.
+            </TextBlock>
+        </Button>
+        <Button Name="showRecent"  HorizontalAlignment="Left" Margin="429,295,0,0" VerticalAlignment="Top" Height="67" Width="134" Click="showRecent_Click">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center">
+                Click to show most recent sessions.
+            </TextBlock>
+        </Button>
+
+        <CheckBox Name="runningSessionsCheck" Content="Running Session" IsChecked="True" HorizontalAlignment="Left" Margin="349,242,0,0" VerticalAlignment="Top"/>
+        <CheckBox  Name="cyclingSessionsCheck" Content="Cycling Session" HorizontalAlignment="Center" Margin="0,262,0,0" VerticalAlignment="Top"/>
+        <RadioButton Name="runningSessionsRadio" IsChecked="True" Content="Running Session" HorizontalAlignment="Left" Margin="80,259,0,0" VerticalAlignment="Top"/>
+        <RadioButton Name="cyclingSessionsRadio" Content="Cycling Session" HorizontalAlignment="Left" Margin="80,239,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>
