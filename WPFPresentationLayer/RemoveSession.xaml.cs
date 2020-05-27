@@ -69,8 +69,6 @@ namespace WPFPresentationLayer
                 {
                     if (runIds.Contains(id))
                         throw new ArgumentException("Run id is already added.");
-                    if (!tm.GetAllRunningSessions().Any(s => s.Id == id))
-                        throw new ArgumentException("Run id is not database.");
                     runIds.Add(id);
                     selectedIds.Text += $"Running session (id): {id}\n";
                 }
@@ -78,9 +76,6 @@ namespace WPFPresentationLayer
                 {
                     if (cycleIds.Contains(id))
                         throw new ArgumentException("Cycle id is already added.");
-
-                    if (!tm.GetAllCyclingSessions().Any(s => s.Id == id))
-                        throw new ArgumentException("Cycle id is in database.");
                     cycleIds.Add(id);
                     selectedIds.Text += $"Cycling session (id): {id}\n";
                 }

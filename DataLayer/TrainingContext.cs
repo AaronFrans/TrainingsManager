@@ -46,7 +46,6 @@ namespace DataLayer
                 SetConnectionString();
             }
             optionsBuilder.UseSqlServer(connectionString);
-            optionsBuilder.EnableSensitiveDataLogging(true);
         }
     }
     public class TrainingContextTest : TrainingContext

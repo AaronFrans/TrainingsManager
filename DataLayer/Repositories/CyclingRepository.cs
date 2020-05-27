@@ -28,7 +28,7 @@ namespace DataLayer.Repositories
         }
         public IEnumerable<CyclingSession> FindAll()
         {
-            return context.CyclingSessions.AsNoTracking().OrderBy(s => s.When).AsEnumerable<CyclingSession>();
+            return context.CyclingSessions.OrderBy(s => s.When).AsEnumerable<CyclingSession>();
         }
 
         public IEnumerable<CyclingSession> Find(DateTime start, DateTime stop)
