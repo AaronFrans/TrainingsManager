@@ -18,6 +18,7 @@ namespace DataLayer
         public TrainingContext(string db = "Production") : base()
         {
             SetConnectionString(db);
+            
         }
         private void SetConnectionString(string db = "Production")
         {
@@ -45,6 +46,7 @@ namespace DataLayer
                 SetConnectionString();
             }
             optionsBuilder.UseSqlServer(connectionString);
+            optionsBuilder.EnableSensitiveDataLogging(true);
         }
     }
     public class TrainingContextTest : TrainingContext

@@ -32,8 +32,6 @@ namespace WPFPresentationLayer
         {
             InitializeComponent();
             tm = new TrainingManager(new UnitOfWork(new TrainingContext(null)));
-            Window testWindow = new Window1(tm , 0);
-            testWindow.Show();
         }
 
         private void AddSess_Click(object sender, RoutedEventArgs e)
@@ -117,6 +115,12 @@ namespace WPFPresentationLayer
         private void ShowErrorMessage(string message)
         {
             MessageBox.Show(message);
+        }
+
+        private void deleteSession_Click(object sender, RoutedEventArgs e)
+        {
+            Window deleteWindow = new RemoveWindow(tm);
+            deleteWindow.Show();
         }
     }
 }

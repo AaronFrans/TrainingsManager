@@ -90,7 +90,7 @@ namespace WPFPresentationLayer
 
         private void SetSessions(List<RunningSession> runSess)
         {
-            sessionsHeader.Text.Replace("x", runSess.Count.ToString());
+            sessionsHeader.Text = sessionsHeader.Text.Replace("x", runSess.Count.ToString());
 
 
             foreach (var session in runSess)
@@ -100,7 +100,7 @@ namespace WPFPresentationLayer
         }
         private void SetSessions(List<CyclingSession> cycleSess)
         {
-            sessionsHeader.Text.Replace("x", cycleSess.Count.ToString());
+            sessionsHeader.Text = sessionsHeader.Text.Replace("x", cycleSess.Count.ToString());
 
             foreach (var session in cycleSess)
             {

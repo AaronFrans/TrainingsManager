@@ -87,10 +87,31 @@ namespace WPFPresentationLayer
 
         private DateTime GetDate()
         {
-            if (dateInput.SelectedDate == null)
-                throw new ArgumentException("Please select a date.");
+            int day = 0, month = 0, year = 0;
+            int hours = 0, minutes = 0, seconds = 0;
 
-            return (DateTime)dateInput.SelectedDate;
+            string[] dateAndTime = dateInput.Text.Split(' ');
+            if (dateAndTime.Length != 2)
+                throw new ArgumentException("Please use the format day/month/year hours:minutes:seconds\n when filling in the date");
+            string[] date = dateAndTime[0].Split('/');
+            string[] time = dateAndTime[1].Split(':');
+
+            if (!int.TryParse(date[0], out day))
+                throw new ArgumentException("Please use the format day/month/year hours:minutes:seconds\n when filling in the date");
+            if (!int.TryParse(date[1], out month))
+                throw new ArgumentException("Please use the format day/month/year hours:minutes:seconds\n when filling in the date");
+            if (!int.TryParse(date[2], out year))
+                throw new ArgumentException("Please use the format day/month/year hours:minutes:seconds\n when filling in the date");
+
+
+            if (!int.TryParse(time[0], out hours))
+                throw new ArgumentException("Please use the format day/month/year hours:minutes:seconds\n when filling in the date");
+            if (!int.TryParse(time[1], out minutes))
+                throw new ArgumentException("Please use the format day/month/year hours:minutes:seconds\n when filling in the date");
+            if (!int.TryParse(time[2], out seconds))
+                throw new ArgumentException("Please use the format day/month/year hours:minutes:seconds\n when filling in the date");
+
+            return new DateTime(year, month, day, hours, minutes, seconds);
 
         }
         private float? GetDistance()
@@ -135,13 +156,13 @@ namespace WPFPresentationLayer
         private TimeSpan GetTime()
         {
             int hours = 0, minutes = 0, seconds = 0;
-            string[] time = timeInput.Text.Split('-');
+            string[] time = timeInput.Text.Split(':');
             if (!int.TryParse(time[0], out hours))
-                throw new ArgumentException("Please use the format hours-minutes-seconds");
+                throw new ArgumentException("Please use the format hours:minutes:seconds\n when filling in the time");
             if (!int.TryParse(time[1], out minutes))
-                throw new ArgumentException("Please use the format hours-minutes-seconds");
+                throw new ArgumentException("Please use the format hours:minutes:seconds\n when filling in the time");
             if (!int.TryParse(time[2], out seconds))
-                throw new ArgumentException("Please use the format hours-minutes-seconds");
+                throw new ArgumentException("Please use the format hours:minutes:seconds\n when filling in the time");
             return new TimeSpan(hours, minutes, seconds);
         }
         public float? GetAverageSpeed()

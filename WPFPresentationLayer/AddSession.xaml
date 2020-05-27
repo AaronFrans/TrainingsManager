@@ -5,12 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFPresentationLayer"
         mc:Ignorable="d"
-        Title="Add Session" Height="350" Width="400">
+        Title="Add Session" Height="350" Width="400"
+        MinHeight="350" MinWidth="400">
     <ScrollViewer>
         <StackPanel>
             <StackPanel Name="infoPanel" Margin="10,10,10,10">
                 <TextBlock TextAlignment="Center" >
-                    Please answer the following fields. <LineBreak />For time please use format hours-minutes-seconds.<LineBreak />If there is a * it is required.
+                    Please answer the following fields.<LineBreak />For date please use format day/month/year hours:minutes:seconds<LineBreak />For time please use format hours:minutes:seconds.<LineBreak /> If there is a * it is required.
                 </TextBlock>
             </StackPanel>
             <StackPanel Name="datePanel" >
@@ -23,7 +24,7 @@
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column="0" Margin="10,10,10,10" >Date*:</Label>
-                    <DatePicker Name="dateInput"   VerticalAlignment="Center" VerticalContentAlignment="Center" Grid.Column="1" Margin="10,10,10,10" />
+                    <TextBox Name="dateInput"   VerticalAlignment="Center" VerticalContentAlignment="Center" Grid.Column="1" Margin="10,10,10,10" />
                 </Grid>
             </StackPanel>
             <StackPanel Name="distancePanel" >
